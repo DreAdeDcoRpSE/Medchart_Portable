@@ -8,6 +8,11 @@ Your medical records are stored on your computer, not uploaded to a cloud servic
 
 > **Platform:** Windows. This is a portable local application, not a publicly accessible web server or a native Windows `.exe` application.
 
+## Self Hosted Version
+> There is self hosted version that you can host on your own website. [Download Here](https://github.com/DreAdeDcoRpSE/Medchart/)
+
+
+
 ## Why I made MedChart
 
 
