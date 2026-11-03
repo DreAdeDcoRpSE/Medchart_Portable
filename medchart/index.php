@@ -77,8 +77,8 @@ if ($result && $result->num_rows > 0) {
             </div>
             <br>
             <h1>Medical Tracker</h1>
-            <label>Name: <input type="text" id="name" value="<?php echo htmlspecialchars($name); ?>"></label><div id="profile-status-name" class="profile-field-status" role="status" aria-live="polite"></div><br><br>
-            <label>DOB: <input type="date" id="dob" value="<?php echo htmlspecialchars($dob); ?>"></label><div id="profile-status-dob" class="profile-field-status" role="status" aria-live="polite"></div><br><br>
+            <label>Name: <input type="text" id="name" autocomplete="off" autocapitalize="none" spellcheck="false" value="<?php echo htmlspecialchars($name); ?>"></label><div id="profile-status-name" class="profile-field-status" role="status" aria-live="polite"></div><br><br>
+            <label>DOB: <input type="date" id="dob" autocomplete="off" value="<?php echo htmlspecialchars($dob); ?>"></label><div id="profile-status-dob" class="profile-field-status" role="status" aria-live="polite"></div><br><br>
         </header>
         <h2>Medications</h2>
         <div class="med-grid-header">
