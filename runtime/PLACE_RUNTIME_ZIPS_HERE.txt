@@ -1,0 +1,3 @@
+Automatic first-run download requires internet. Alternatively put official
+Windows x64 portable runtime archives here named php.zip and mariadb.zip.
+No need to extract them manually.
