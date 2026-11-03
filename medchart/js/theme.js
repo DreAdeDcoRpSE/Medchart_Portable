@@ -31,7 +31,7 @@
     control.appendChild(label);control.appendChild(picker);
     var header=document.querySelector('.bodywrap > header');
     if(header) header.insertBefore(control,header.firstChild);
-    else {var login=document.querySelector('.login-container');if(login)login.insertBefore(control,login.firstChild);else {var main=document.querySelector('main');if(main)main.insertBefore(control,main.firstChild);else document.body.insertBefore(control,document.body.firstChild);}}
+    else {var login=document.querySelector('.login-container:not(.shutdown-note)');if(login)login.insertBefore(control,login.firstChild);else {var main=document.querySelector('main');if(main)main.insertBefore(control,main.firstChild);else document.body.insertBefore(control,document.body.firstChild);}}
     apply();
   });
 })();

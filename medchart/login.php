@@ -74,6 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
+            gap: 16px;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -90,6 +92,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             /* Max width for larger screens */
             box-sizing: border-box;
         }
+
+        .shutdown-note {
+            padding: 16px 22px;
+            border: 1px solid #ff8040;
+        }
+
+        .shutdown-note h3 {
+            margin: 0 0 8px;
+            color: #ff8040 !important;
+        }
+
 
         h2 {
             text-align: center;
@@ -196,6 +209,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+    <div class="login-container shutdown-note" role="note">
+        <h3>Note:</h3>
+        When you are completely done using MedChart Portable, click the "Stop MedChart" button to shut down the system. Logging out alone does not stop it.
+    </div>
     <div class="login-container">
         <h2>Login</h2>
         <?php if ($error !== ''): ?>
@@ -215,7 +232,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         <form method="post" action="portable_shutdown.php" onsubmit="return confirm('⚠️ Before Shutting Down ⚠️\n\nMake sure you have everything saved!');" style="margin-top:16px;text-align:center;">
             <input type="hidden" name="csrf" value="<?= htmlspecialchars(med_csrf(), ENT_QUOTES, 'UTF-8') ?>">
-            <button type="submit" style="padding:9px 18px;border:1px solid #a1a1a1;border-radius:6px;color:inherit;cursor:pointer;" class="medchart-stop-btn">Stop MedChart</button>
+            <button type="submit" style="padding:9px 18px; border:1px solid #a1a1a1;border-radius:6px; color:inherit; cursor:pointer;" class="medchart-stop-btn">Stop MedChart</button>
         </form>
 
     </div>
