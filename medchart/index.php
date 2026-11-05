@@ -60,7 +60,6 @@ if ($result && $result->num_rows > 0) {
         <div id="mobile-scroll-helper" aria-hidden="true"></div>
         <header>
             <div class="medchart-toolbar">
-                <button type="button" id="profile-save" onclick="saveAll()">Save</button>
                 <details class="medchart-menu"><summary aria-label="Open menu">☰ Menu</summary>
                     <nav aria-label="MedChart actions">
                         <a href="print.php" target="_blank" rel="noopener">Printer Friendly Version</a>
@@ -70,6 +69,7 @@ if ($result && $result->num_rows > 0) {
                         <a href="logout.php">Logout</a>
                     </nav>
                 </details>
+                <button type="button" id="profile-save" onclick="saveAll()">Save</button>
                 <form method="post" action="portable_shutdown.php" onsubmit="return confirm('⚠️ Before Shutting Down ⚠️\n\nMake sure you have everything saved!');" style="text-align:center;">
                     <input type="hidden" name="csrf" value="<?= htmlspecialchars(med_csrf(), ENT_QUOTES, 'UTF-8') ?>">
                     <button type="submit" class="medchart-stop-btn">Stop MedChart</button>
